@@ -17,8 +17,11 @@ gcc -c -fPIC UART_Connector.c -o UART_Connector.o
 
 gcc -shared Client_API.o Client_Dispatcher.o Client_Packager.o Serializer_BuiltIn.o Serializer_Struct.o UART_Connector.o -o libbosonclient.so
 
+
 cd ../
-gcc -I$c_f $examples_f/example_linux.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o $examples_f/example_linux
-gcc -I$c_f $examples_f/boson_cpu_temp.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o $examples_f/boson_cpu_temp
-gcc -I$c_f $examples_f/boson_sensor_temp.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o $examples_f/boson_sensor_temp
-gcc -I$c_f $examples_f/boson_temp.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o $examples_f/boson_temp
+mkdir bin/
+
+gcc -I$c_f $examples_f/example_linux.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o bin/example_linux
+gcc -I$c_f $examples_f/boson_cpu_temp.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o bin/boson_cpu_temp
+gcc -I$c_f $examples_f/boson_sensor_temp.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o bin/boson_sensor_temp
+gcc -I$c_f $examples_f/boson_temp.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o bin/boson_temp
