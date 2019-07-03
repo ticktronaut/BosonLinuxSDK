@@ -21,3 +21,4 @@ cd ../
 gcc -I$c_f $examples_f/example_linux.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o $examples_f/example_linux
 gcc -I$c_f $examples_f/boson_cpu_temp.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o $examples_f/boson_cpu_temp
 gcc -I$c_f $examples_f/boson_sensor_temp.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o $examples_f/boson_sensor_temp
+gcc -I$c_f $examples_f/boson_temp.c $c_f/libbosonclient.so $emulator_f/UART_HalfDuplex64.so -o $examples_f/boson_temp
