@@ -182,16 +182,16 @@ int main()
 
 	// Step 9: Run a Flat Field Correction on the Camera
 	// Sidenote: FFC can be manually triggered from any FFCMode
-	result = bosonRunFFC();
-	printf("RunFFC: ");
-	if (result)
-	{
-		printf("Failed FFC with status 0x%08X, exiting.\n",result);
-		Close();
-		return 1;
-	}
-	printf("0x%08X \n", result);
-	printf("SUCCESS\n\n");
+	// result = bosonRunFFC();
+	// printf("RunFFC: ");
+	// if (result)
+	// {
+	//	printf("Failed FFC with status 0x%08X, exiting.\n",result);
+	//	Close();
+	//	return 1;
+	// }
+	// printf("0x%08X \n", result);
+	// printf("SUCCESS\n\n");
 	
 	printf("Closing...\n");
 	Close();

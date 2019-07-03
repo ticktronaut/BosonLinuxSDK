@@ -1,0 +1,4 @@
+ClientFiles_C/*.o
+ClientFiles_C/*.so
+examples/boson_cpu_temp
+examples/boson_sensor_temp

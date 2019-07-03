@@ -18,20 +18,27 @@ It's written for interface with a Linux system and performs the following comman
 ----------
 To compile
 ----------
-First, compile the UART wrapper by nagivating to the ./EmulatorFiles/ directory and running
+First, compile by running
 ```
-make
-```
-
-Then go to the ./ClientFiles_C/ folder and run
-```
-gcc Client_API.c Client_Dispatcher.c Client_Packager.c example_linux.c Serializer_BuiltIn.c Serializer_Struct.c UART_Connector.c ../EmulatorFiles/UART_HalfDuplex64.so -o example_linux
+./build.sh
 ```
 
 --------------
 To run:
 --------------
-Run example_linux in the ClientFiles_C directory after compiling.
+Run example_linux in the examples directory after compiling.
+
+Obtain processor temperature
+```
+./examples/boson_cpu_temp
+```
+
+Obtain sensor temperature
+```
+./examples/boson_fpa_temp
+```
+
+Run multiple examples
 ```
 ./example_linux
 ```
