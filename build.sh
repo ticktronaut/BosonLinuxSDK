@@ -1,13 +1,13 @@
 #!/bin/sh
 
-c_f="ClientFiles_C"
-emulator_f="EmulatorFiles"
-examples_f="examples"
+c_f="$PWD/ClientFiles_C"
+emulator_f="$PWD/EmulatorFiles"
+examples_f="$PWD/examples"
 
 cd $emulator_f
 make
 
-cd ../$c_f
+cd $c_f
 gcc -c -fPIC Client_API.c -o Client_API.o
 gcc -c -fPIC Client_Dispatcher.c -o Client_Dispatcher.o
 gcc -c -fPIC Client_Packager.c -o Client_Packager.o
